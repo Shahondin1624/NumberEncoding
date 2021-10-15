@@ -36,6 +36,10 @@ public class BinaryEncoding extends Encoding {
         return resultBuilder.toString();
     }
 
+    public String toOctal(String input, boolean withPrint) {
+        return new OctalEncoding().fromDecimal(toDecimal(input, false), withPrint);
+    }
+
     private String[] splitInFourths(String binary) {
         String formatted = binary.replaceAll("(?<=\\G\\d{4})", "-");
         return formatted.split("-");

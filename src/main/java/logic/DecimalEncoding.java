@@ -12,4 +12,8 @@ public class DecimalEncoding extends Encoding {
     public String toBinary(long number, boolean withPrint) {
         return new BinaryEncoding().fromDecimal(number, withPrint);
     }
+
+    public String toOctal(long number, boolean withPrint) {
+        return new OctalEncoding().fromDecimal(number, withPrint);
+    }
 }
